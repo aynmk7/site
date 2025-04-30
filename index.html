@@ -41,8 +41,17 @@
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: anamik@nd.edu.com</p>
-    <p>Resume: <a href="https://www.youtube.com/watch?v=Aq5WXmQQooo">click here!</a></p>
-  </section>
+<p>
+  Resume: 
+  <a href="https://www.youtube.com/watch?v=Aq5WXmQQooo"
+     onclick="gtag('event', 'click', {
+       'event_category': 'link',
+       'event_label': 'resume-link',
+       'value': 1
+     })">
+    click here!
+  </a>
+</p>  </section>
 
   <hr>
 
