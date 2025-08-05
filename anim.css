@@ -1,0 +1,251 @@
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes rotateLeft {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotateRight {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+@keyframes marquee-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.cust-nav {
+  transition: width 2s;
+}
+.blob {
+  border-radius: 35% 65% 70% 30% / 57% 59% 41% 43%;
+}
+.text-border {
+  -webkit-text-stroke: 1px black;
+  color: transparent;
+}
+.text-border-white {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+}
+
+.animate-rotate-left {
+  animation: rotateLeft 0.4s linear;
+}
+.animate-rotate-right {
+  animation: rotateRight 0.3s linear;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+.animate-slide-out {
+  animation: slideOut 0.3s ease-in forwards;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.scroller__inner li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  box-shadow: 0 0.5rem 1rem -0.25rem rgba(0, 0, 0, 0.173);
+}
+
+.scroller__inner li:hover {
+  background-color: rgba(128, 128, 128, 0.248);
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+body {
+  scroll-behavior: smooth;
+  transition: background-color 1s ease-in-out;
+}
+.mybtn {
+  position: relative;
+  overflow: hidden;
+}
+
+.mybtn span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, black, gray);
+  animation: animate1 4s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.mybtn span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to right, black, gray);
+  animation: animate2 4s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes animate2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.mybtn span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, black, gray);
+  animation: animate3 4s linear infinite;
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.mybtn span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to right, black, gray);
+  animation: animate4 4s linear infinite;
+  animation-delay: 2s;
+}
+
+@keyframes animate4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.cursor-small-dot {
+  position: fixed;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.cursor-big-dot {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  padding: 1rem;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: transform 0.001s ease;
+  pointer-events: none;
+  z-index: 100;
+}
