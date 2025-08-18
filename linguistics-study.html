@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/hiking pic.JPG">
+    <title>Iraqi-Turkmen Vowel Study - Aynaz A Namik</title>
+    
+    <!-- SEO -->
+    <meta name="description" content="A linguistic case study on Iraqi-Turkman vowel pronunciation patterns across generations by Aynaz Namik" />
+    <meta name="keywords" content="linguistics, Iraqi-Turkmen, phonetics, PRAAT, vowel analysis, language change" />
+    <meta name="author" content="Aynaz A Namik" />
+    
+    <meta property="og:title" content="Iraqi-Turkmen Vowel Study - Aynaz A Namik" />
+    <meta property="og:description" content="A linguistic case study analyzing vowel pronunciation patterns in Iraqi-Turkman speakers across generations" />
+    <meta property="og:image" content="./assets/images/turkman plot.png" />
+    <meta property="og:type" content="article" />
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="anim.css">
+</head>
+
+<body class="max-w-screen-2xl bg-pink-50 mx-auto min-h-screen font-popins-regular overflow-x-hidden dark:bg-gray-900 dark:text-gray-400 text-gray-800">
+    <div class="flex flex-col max-w-screen-xl mx-auto relative">
+        
+        <!-- NAVBAR HEADER-->
+        <header class="mt-2 top-0 left-0 w-full sticky z-10" data-aos="fade-down" data-aos-once="true">
+            <nav class="flex rounded-2xl items-center py-2 px-5 shadow-lg bg-opacity-10 backdrop-blur-md relative dark:border-2 dark:border-gray-800">
+                <a href="index.html" class="font-popins-semibold text-sm flex flex-1 justify-center hover:scale-105 transition-transform duration-300">
+                    <i class="fa-solid fa-arrow-left mr-2"></i>
+                    Back to Portfolio
+                </a>
+                <button name="toggle-theme" id="toggle-theme" class="font-popins-semibold text-sm flex items-center justify-center">
+                    <span class="hidden dark:inline"><i class="fa-solid fa-moon"></i></span> 
+                    <span class="dark:hidden inline"><i class="fa-solid fa-sun"></i></span>
+                </button>
+            </nav>
+        </header>
+        <!-- NAVBAR HEADER-->
+
+        <!-- MAIN CONTENT -->
+        <main class="flex-1 px-5 py-8">
+            <!-- HERO SECTION -->
+            <section class="text-center mb-12" data-aos="fade-up">
+                <div class="mb-6">
+                    <span class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider">Linguistic Research</span>
+                    <h1 class="font-popins-black text-3xl md:text-5xl mt-2 mb-4">
+                        Iraqi-Turkmen Vowel Study
+                    </h1>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                        A Linguistic Case Study on Vowel Pronunciation Patterns Across Generations
+                    </p>
+                </div>
+                
+                <div class="flex justify-center items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span>December 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Aynaz Ali Namik</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-microphone"></i>
+                        <span>PRAAT Analysis</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FEATURED IMAGE -->
+            <section class="mb-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-full max-w-4xl mx-auto">
+                    <img src="./assets/images/turkman plot.png" alt="Linguistic Analysis Visualization" 
+                         class="w-full h-auto rounded-xl shadow-lg">
+                </div>
+            </section>
+
+            <!-- ARTICLE CONTENT -->
+            <article class="max-w-4xl mx-auto">
+                
+                <!-- INTRO -->
+                <section class="mb-12" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="font-popins-bold text-2xl mb-6 border-b-2 border-gray-200 dark:border-gray-700 pb-2">
+                        Introduction
+                    </h2>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+                        <p class="text-justify leading-relaxed">
+                            America is widely recognized for its immigrants, with a large mix of first and second-generation English speakers. Children born into bilingual households, where they only speak their parents’ native language at home and use English otherwise, may be susceptible to losing proficiency in their non-English language. This phenomenon is particularly relevant to many second-generation bilingual speakers, as they are beginning to lose their full ability to speak their non-English language. While it is acknowledged that bilingual households contribute to second language acquisition in children, the question remains: How much direct input is necessary for acquisition at a native level? This research argues that the more one speaks their non-English language at home, the better they acquire that language at a native level.
+                        </p>
+                        <p class="text-justify leading-relaxed mb-4">
+                            For these individuals, it is believed that the development required to reach native-like pronunciation is dependent on how easy it is to speak English at home. Those who are able to speak English will have less of a role of input of the other language, causing them to be less able to speak at a native-like level, phonetically.
+                        </p>
+                        <p class="text-justify leading-relaxed">
+                            This research experiment focuses on the difference in pronunciation between a native speaker of the Iraqi Turkman dialect (first generation speaker) and the children born into an Iraqi Turkman household (second generation speakers).
+                        </p>
+                    </div>
+                </section>
+
+                <!-- TERMINOLOGY -->
+                <section class="mb-12" data-aos="fade-up" data-aos-delay="300">
+                    <h2 class="font-popins-bold text-2xl mb-6 border-b-2 border-gray-200 dark:border-gray-700 pb-2">
+                        TERMINOLOGY
+                    </h2>
+                    <div class="prose prose-lg dark:prose-invert max-w-none">
+                        <p class="text-justify leading-relaxed mb-4">
+                            	Key terminology within this experiment will be the International Phonetic Alphabet (IPA), which is a standardized alphabet (represented by Figure 1 below) to have a uniform depiction of sounds from all languages to help provide consistent transliterations of the words tested. The symbols within this alphabet will be used in an attempt to provide a standardized assessment of the vowels pronounced, whose symbols are present in Figure 2. Other terminology such as front, central, back, high, mid, and low vowels will be used. The sound emitted by vowels are differentiated depending on the placement of one’s tongue in their mouth and lips, which are described to be more in the ‘front’, ‘back’, etc. Vowels tend to be a combination of front, central, or back and high, mid, or low and usually fall on a spectrum, denoted and demonstrated in Figure 2 below.
+
+                        </p>
+                        <p class="text-justify leading-relaxed mb-4">
+                            F1 and F2 are frequencies of the vocal tract that specify placement of vowels; F1 indicates the height of the tongue (high, mid, or low) and F2 indicates the frontness of a vowel (front, central, or back), which are imperative to classify vowel placement. In order to efficiently visualize the placements of these vowels, scatterplots of individuals' F1 (y axis) and F2 (x axis) are used. These values are extracted from PRAAT, which is a relevant digital tool in the field of linguistics, to help phonetically classify vowels. The overall numerical values are deemed trustworthy, as they are computer generated and have no leeway for bias. It is important to note that in these scatterplots, the numbers on the y axis are reversed from smallest (on the top) to largest (on the bottom).
+                        </p>
+                    </div>
+                </section>
+
+                <!-- METHODOLOGY -->
+                <section class="mb-12" data-aos="fade-up" data-aos-delay="400">
+                    <h2 class="font-popins-bold text-2xl mb-6 border-b-2 border-gray-200 dark:border-gray-700 pb-2">
+                        Methodology
+                    </h2>
+                    <div class="prose prose-lg dark:prose-invert max-w-none">
+                        <p class="text-justify leading-relaxed mb-4">
+                            The primary method of collecting data will be through interviews, in which the participants will be asked to say Iraqi Turkman and English words of pictures shown to them, which will be recorded and inputted into PRAAT. The participants were a nuclear Iraqi Turkman family residing in the suburbs of Chicago with the first generation speaker being the mother and the second generation speakers being the daughters.
+                        </p>
+                        <p class="text-justify leading-relaxed mb-4">
+                            The participants were shown images of the words they needed to say instead of directly asking them, which eliminated the possibility of them imitating the way it was said to them in contrast to how they would have said it candidly. It should also be noted that the imitation of others' pronunciation from the participants was reduced by having them participate in the study in separate rooms; hearing the others' pronunciation could also influence their own pronunciations of the same words. Overall, the research methods enacted were best optimized to reduce bias and have its outputs directly relate to the information being researched.
+                        </p>
+                        <p class="text-justify leading-relaxed mb-4">
+                            The F1 and F2 values were taken by determining the middle point of when the vowel is being pronounced within the audio recording, and then extracting the numerical values for F1 and F2 that are generated by PRAAT. By sectioning off the clip and finding the midpoint, it is equal distance from the potentially preceding or following sounds, resulting in the most accurate depiction of solely the target vowel.
+                        </p>
+                        <p class="text-justify leading-relaxed mb-4">
+                            The words that were tested for were: dʊr, Ɪnʃɑlə, and yə, which mean stop, hopefully, and yes. These specific words were chosen to ensure that a range of vowels would be tested. Since e, ʊ, ə (the target vowels) are all located in different placements within the mouth (both in terms of height and forwardness), it incorporates a range of placement areas within the mouth.
+                        </p>
+                        <p class="text-justify leading-relaxed mb-4">
+                            The images shown in the testing were a stop sign for dʊr (stop), the Arabic symbol for Ɪnʃɑlə (hope) alongside the image of someone praying, and a green check mark for yə (yes). If the incorrect word was initially said, then the participants would know to keep guessing until they were given a thumbs up for the correct word. In this specific experiment, most participants got it on their first try, signifying a relatively high accuracy with the method used. If the participant did miss the word, it had a tendency to be for Ɪnʃɑlə (hope) instead of dʊr (stop) or yə (yes).
+                        </p>
+                        <p class="text-justify leading-relaxed mb-4">
+                            The specific transliterations of the words were carefully chosen with use of the consonants and vowels in the IPA. The consonants were clear transfers into IPA symbols, such as 'd' and 'r' staying the same or 'sh', turning into 'ʃ '. For the vowels, the transliteration of the vowels took the native speakers' pronunciation into consideration, using their F1 and F2 values to find the closest vowel according to the vowel chart, per Figure 2.
+                        </p>
+                        <p class="text-justify leading-relaxed mb-4">
+                            It is important to note that the native speaker participant for Iraqi Turkman was born and raised in the northern parts of Iraq, which may result in different accents within the language in comparison to the Turkman people in southern parts of Iraq. The native speaker then moved to the midwest in the 1990s, more specifically the greater Chicago area in Illinois, which is where her daughters were born and raised. When referring to patterns present within their pronunciations, it is also important to note that the Midwestern region in which the daughters were born may also influence their pronunciations.
+                        </p>
+                        <p class="text-justify leading-relaxed">
+                            Figures 3, 4, and 5 below include the scatter plot of the words that were tested, with "n" representing the native speaker (who is 48 years old), "d1" standing for daughter 1 (who is 26 years old), and "d2" standing for daughter 2 (who is 10 years old). These categories are separated by their respective colors for all graphs, which is shown in their legends. The vowel chart, as shown in figure one, was cropped and simplified for clarity purposes, made transparent, and then overlaid onto the scatterplot to provide a visual guide of where the vowels lay (and consequently the trends between them).
+                        </p>
+                    </div>
+                </section>
+
+                <!-- KEY FINDINGS -->
+                <section class="mb-12" data-aos="fade-up" data-aos-delay="500">
+                    <h2 class="font-popins-bold text-2xl mb-6 border-b-2 border-gray-200 dark:border-gray-700 pb-2">
+                        Results and Discussion
+                    </h2>
+                    
+                    <div class="prose prose-lg dark:prose-invert max-w-none">
+                        <p class="text-justify leading-relaxed mb-4">
+                            In looking at the results of all scatterplots in Figures 3, 4, and 5, the assessment of daughters 1 and 2 vowel placements will be relative to the native speaker's. Daughter 1's pronunciation is higher and farther back, while daughter 2's pronunciation is lower and more forward.
+                        </p>
+                        
+                        <p class="text-justify leading-relaxed mb-4">
+                            A theory of bilingual development, the role of input, states that how much input in each language necessary to become fully bilingual is unknown. Some reasoning that could explain why daughter 1 is closer to native level is the more frequent interactions with the language as a child.
+                        </p>
+                        
+                        <p class="text-justify leading-relaxed mb-4">
+                            A possibility is that, in considering the significant age gap between the two daughters, there is a proportional relationship between the amount of years the native speaker has lived in America for and the frequency that they speak English. Daughter 1 may have been raised in a time period where the native speaker was not as comfortable with speaking English, forcing daughter 1 to only speak Iraqi Turkman at home.
+                        </p>
+                        
+                        <p class="text-justify leading-relaxed mb-4">
+                            Daughter 2, on the other hand, may have been born and raised in an environment where the native speaker would be more assimilated into American culture and comfortable with the English language, allowing daughter 2 to switch back and forth between English and Iraqi Turkman in her home environments. Daughter 2 also has access to daughter 1, providing further at-home opportunities to speak English that daughter 1 did not have.
+                        </p>
+                        
+                        <p class="text-justify leading-relaxed mb-4">
+                            While according to the role of input, the exact amount of input necessary is unknown, it is clear that the less one speaks in their home environment, the less authentic their vowel pronunciation is. Negative consequences are implied as it hinders their ability to reach native proficiency and encourages the loss of language acquisition, phonetically.
+                        </p>
+                        
+                        <p class="text-justify leading-relaxed mb-4">
+                            For both daughters 1 and 2, the home environment is the only place that input for Iraqi Turkman can be received. A lack of the same ethnicity within their community, and thus language, plays a role as it isolates its use to solely being at-home. Receiving language instruction in public schools through English also strains their ability to acquire Iraqi Turkman because English is proactively being developed. Linguistic reinforcement from authority figures in a professional setting and colloquial reinforcement from friends made in the classroom develops two aspects of language use for English.
+                        </p>
+                        
+                        <p class="text-justify leading-relaxed mb-4">
+                            Whereas, Iraqi Turkman is confined to shorter at-home interactions (if at all for the case of daughter 2), which wouldn't develop and expand in the same way as it revolves around the similar topics (conversations that typically occur within family are chores, what is being made for dinner, daily routines, etc.) over and over again.
+                        </p>
+                        
+                        <p class="text-justify leading-relaxed">
+                            This exact lack of development can be generalized to highlight how at risk the maintenance of Iraqi Turkman is. When considering that it is a minority language, if many later generations (who are raised in predominantly non-Iraqi Turkman speaking communities) are failing to properly acquire the language, then it puts the language at risk of extinction. The culture and history tied to Iraqi Turkman would be lost as well.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- CONCLUSION -->
+                <section class="mb-12" data-aos="fade-up" data-aos-delay="600">
+                    <h2 class="font-popins-bold text-2xl mb-6 border-b-2 border-gray-200 dark:border-gray-700 pb-2">
+                        Conclusion
+                    </h2>
+                    <div class="prose prose-lg dark:prose-invert max-w-none">
+                        <p class="text-justify leading-relaxed mb-4">
+                            Overall, the findings show that with age, the likelihood of properly acquiring the phonetic intricacies of the language significantly decreased if a second generation learner is not the firstborn child, born many years after the native speaker moves out of their homeland, and if the second generational learner does not actively have access to a community of other speakers (to develop their professional and colloquial tongue).
+                        </p>
+                        
+                        <p class="text-justify leading-relaxed mb-4">
+                            These findings directly back up the initial hypothesis, being that the second generational learners are susceptible to losing native-like proficiency in their language. It does, however, also reassure that being second generation and lacking a community does not guarantee the inability to acquire native-like proficiency, as daughter 1 was relatively close to the native speaker with vowel pronunciations. These findings further emphasize how imperative at-home communication must be solely in one's native tongue, as the language instruction would not be found for second generation children otherwise.
+                        </p>
+                        
+                        <p class="text-justify leading-relaxed mb-4">
+                            With the consideration of these factors, there could be more of a proactive approach to create communities that support language learning of both English and Iraqi Turkman. Parents could know to make more of a conscious choice to monitor Iraqi Turkman speaking at home and they could try to teach their children to be literate in their own language to contextualize the language in a more professional setting.
+                        </p>
+                        
+                        <p class="text-justify leading-relaxed mb-4">
+                            To further understand the intricacies of the topic, future research could be conducted on Iraqi Turkman pronunciation of individuals who never migrated out of northern Iraq vs native speakers born and raised there but then moved later on in their early adulthood. The implications of these findings could highlight a possible domino effect: if there is a correlation between whether or not assimilating into a predominantly English-speaking environment influenced the native speakers pronunciation over time, which would then influence the way that it was taught to second generation speakers, who teach their own variations to third generation speakers, and so forth.
+                        </p>
+                        
+                        <p class="text-justify leading-relaxed mb-4">
+                            This potential domino effect would help to explain whether the direction of this linguistic evolution for Iraqi Turkman- if the evolution exists at all- has a correlation with the assimilation into American culture and thus, vowel assimilation to a Midwestern accent in Illinois.
+                        </p>
+                        
+                        <p class="text-justify leading-relaxed">
+                            Knowing the full extent that one's environment has on phonetic language acquisition can provide incredibly strong implications on what factors are necessary to preserve languages from extinction. A diverse array of languages not only promotes diversity and intercultural understanding, but can provide historical context on where languages originated from and how they influenced one another.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- TECHNICAL DETAILS -->
+                <section class="mb-12" data-aos="fade-up" data-aos-delay="800">
+                    <h2 class="font-popins-bold text-2xl mb-6 border-b-2 border-gray-200 dark:border-gray-700 pb-2">
+                        Technical Specifications
+                    </h2>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+                        <div class="grid md:grid-cols-3 gap-6 text-sm">
+                            <div>
+                                <h4 class="font-popins-semibold mb-2">Software</h4>
+                                <p class="text-gray-600 dark:text-gray-400">PRAAT 6.3.x</p>
+                            </div>
+                            <div>
+                                <h4 class="font-popins-semibold mb-2">Sample Rate</h4>
+                                <p class="text-gray-600 dark:text-gray-400">44.1 kHz, 16-bit</p>
+                            </div>
+                            <div>
+                                <h4 class="font-popins-semibold mb-2">Analysis Window</h4>
+                                <p class="text-gray-600 dark:text-gray-400">25ms Hamming</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="flex flex-col relative mt-10 bg-black w-full items-center justify-center py-8 px-3 gap-4">
+            <div class="flex justify-center gap-4 md:gap-10 items-center text-white w-1/2 mt-5">
+                <a href="https://github.com/aynmk7" aria-label="Visit Aynaz's GitHub profile" title="GitHub"
+                    target="_blank" rel="noopener noreferrer" class="flex items-center justify-center text-xs gap-1">
+                    <i class="fa-brands fa-github"></i>
+                    <div>Github</div>
+                </a>
+                <a href="mailto:aynazanamik@gmail.com" aria-label="Send an email to Aynaz" title="Email"
+                    class="flex items-center justify-center text-xs gap-1">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>Gmail</div>
+                </a>
+                <a href="https://linkedin.com/in/aynaznamik"
+                    aria-label="Visit Aynaz's LinkedIn profile" title="LinkedIn" target="_blank"
+                    rel="noopener noreferrer" class="flex items-center justify-center text-xs gap-1">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <div>LinkedIn</div>
+                </a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease',
+            once: false,
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
