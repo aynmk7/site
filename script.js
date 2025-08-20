@@ -185,3 +185,80 @@ const mouseMoveHandler = (e) => {
   }, 1000);
 };
 window.addEventListener("mousemove", mouseMoveHandler);
+
+// Slideshow functionality
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const indicators = document.querySelectorAll('.slide-indicator');
+const slideCounter = document.getElementById('slide-counter');
+const totalSlides = slides.length;
+
+function updateSlideCounter() {
+  if (slideCounter) {
+    slideCounter.textContent = `${currentSlide + 1}/${totalSlides}`;
+  }
+}
+
+function showSlide(index) {
+  // Hide all slides
+  slides.forEach(slide => {
+    slide.classList.remove('active');
+    slide.classList.add('hidden');
+  });
+  
+  // Remove active class from all indicators
+  indicators.forEach(indicator => {
+    indicator.classList.remove('active');
+  });
+  
+  // Show the current slide
+  if (slides[index]) {
+    slides[index].classList.remove('hidden');
+    slides[index].classList.add('active');
+  }
+  
+  // Activate the current indicator
+  if (indicators[index]) {
+    indicators[index].classList.add('active');
+  }
+  
+  // Update slide counter
+  updateSlideCounter();
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
+}
+
+function previousSlide() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  showSlide(currentSlide);
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  showSlide(currentSlide);
+}
+
+// Initialize slideshow if slides exist
+if (slides.length > 0) {
+  showSlide(0);
+  
+  // Add event listeners for navigation
+  const nextBtn = document.querySelector('.slide-nav.next');
+  const prevBtn = document.querySelector('.slide-nav.prev');
+  
+  if (nextBtn) {
+    nextBtn.addEventListener('click', nextSlide);
+  }
+  
+  if (prevBtn) {
+    prevBtn.addEventListener('click', previousSlide);
+  }
+  
+  // Add event listeners for indicators
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => goToSlide(index));
+  });
+}

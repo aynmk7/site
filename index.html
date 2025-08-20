@@ -293,9 +293,9 @@
                     </div>
 
                     <!-- Experience2 - Niemier Lab + Image -->
-                    <div class="flex w-full xl:w-1/2 gap-4 items-center mb-4" data-aos="fade-up">
-                        <div class="border-2 border-black dark:border-gray-800 h-64 md:h-80 aspect-square px-5 py-5 flex flex-col justify-center hover:shadow-lg hover:scale-105 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 cursor-pointer flex-1">
-                            <div class=" flex gap-2 text-base md:text-xl xl:text-2xl font-popins-semibold items-center">
+                    <div class="flex w-full xl:w-1/2 gap-4 items-start mb-4" data-aos="fade-up">
+                        <div class="border-2 border-black dark:border-gray-800 min-h-96 px-6 py-6 flex flex-col justify-start hover:shadow-lg hover:scale-105 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 cursor-pointer flex-1">
+                            <div class=" flex gap-2 text-base md:text-xl xl:text-2xl font-popins-semibold items-center mb-4 px-4">
                                 <div>
                                     <i class="fa-solid fa-microscope"></i>
                                 </div>
@@ -307,13 +307,146 @@
                                 </div>
                             </div>
 
-                            <div class=" text-sm md:text-base mt-5">
-                                <div class=" text-justify flex">
-                                    <p class="ml-5 pl-2 border-l border-l-gray-500 py-3">
-                                        Recreated results from the MIMDRAM github using gem5. Explored how Ferroeletric Field Effect Transistors (FeFETs)-- a new emerging device-- could better optimize the in-memory computing process, HTAP databases (application: credit card fraud detection), and high-frequency trading (through FPGAs).
+                            <div class="text-sm md:text-base relative overflow-auto p-4">
+                                <!-- Slide Counter -->
+                                <div class="absolute top-2 left-2 text-xs text-gray-500 dark:text-gray-400 font-semibold z-10">
+                                    <span id="slide-counter">1/8</span>
+                                </div>
+                                
+                                <!-- Slideshow Container -->
+                                <div id="niemier-slideshow" class="relative">
+                                    <!-- Slide 0 - Overview -->
+                                    <div class="slide active text-justify flex">
+                                        <p class="pl-4 border-l-4 border-l-gray-500 py-4 leading-relaxed">
+                                            Recreated results from the MIMDRAM GitHub repository using gem5. Explored how Ferroelectric Field Effect Transistors (FeFETs)—a new emerging device—could better optimize the in-memory computing process, HTAP databases (application: credit card fraud detection), and high-frequency trading (through FPGAs).
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Slide 1 - Transistor Explanation -->
+                                    <div class="slide hidden text-justify flex">
+                                        <div class="pl-4 border-l-4 border-l-gray-500 py-4 space-y-4">
+                                            <p class="font-semibold text-base">What is a transistor?</p>
+                                            <p class="leading-relaxed">
+                                                This is very oversimplified! Essentially, a transistor is a device in memory that lets currents of voltage flow through and charge a capacitor, which is also in memory. A transistor + capacitor is basically how data is stored in memory.
+                                            </p>
+                                            <p class="leading-relaxed">
+                                                Everything, like pictures, gets converted to a series of 1s and 0s (for example, your phone's wallpaper = 11101). These numbers are represented by electricity. A certain amount of charge (voltage) represents a 1, and this information is stored inside the capacitor.
+                                            </p>
+                                            <p class="leading-relaxed">
+                                                The problem is that every time you want to read or write to the capacitor, you have to activate the memory cell. When you do this, you lose the charge, so many methods to ensure charge retention have been developed.
+                                            </p>
+                                        </div>
+                                    </div>
 
-                                    </p>
+                                    <!-- Slide 2 - FeFET explanation -->
+                                    <div class="slide hidden text-justify flex">
+                                        <div class="pl-4 border-l-4 border-l-gray-500 py-4 space-y-4">
+                                            <p class="font-semibold text-base">What is an FeFET?</p>
+                                            <p class="leading-relaxed">
+                                                An FeFET stands for ferroelectric field-effect transistor, which is a type of transistor that uses ferroelectric material to control current flow. FeFETs are known for their low power consumption and high speed, making them suitable for memory and logic devices.
+                                            </p>
+                                            <p class="leading-relaxed">
+                                                What's very important for our research is that because of its material, you can program an FeFET to store charge WITHIN the transistor! So now, both the capacitor AND transistor can store data.
+                                            </p>
+                                            <p class="leading-relaxed">
+                                                However, the material is not completely durable. Many reads or writes to this transistor will wear it down. These are not the transistors currently used in industry, but much research is being conducted to gauge the pros and cons of potential implementation.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Slide 3 - MIMDRAM explanation -->
+                                    <div class="slide hidden text-justify flex">
+                                        <div class="pl-4 border-l-4 border-l-gray-500 py-4 space-y-4">
+                                            <p class="leading-relaxed">
+                                                This research project did not use FeFET transistors, but instead proposed a hardware-software co-design that gave different computation instructions to the operating system (OS).
+                                            </p>
+                                            <p class="leading-relaxed">
+                                                On a hardware level, they used sense amplifiers for computation along with optimizing how rows were activated (multiple rows at once and only activating necessary columns) to make computations more efficient.
+                                            </p>
+                                            <p class="leading-relaxed">
+                                                This is important because the data stays closer to the memory where it is stored, whereas transferring data from memory to another part of the hardware (which could be farther and thus more expensive and time-consuming) for computations is less efficient.
+                                            </p>
+                                        </div>
+                                    </div>
 
+                                    <!-- Slide 4 - HTAP explanation -->
+                                    <div class="slide hidden text-justify flex">
+                                        <div class="pl-4 border-l-4 border-l-gray-500 py-4 space-y-4">
+                                            <p class="leading-relaxed">
+                                                We thought that if we added an FeFET transistor to the hardware architecture they used in MIMDRAM, we could further optimize the in-memory computing developments. We looked into applications as to why this would matter, and thus researched HTAP databases.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 5 - HTAP detailed explanation -->
+                                    <div class="slide hidden text-justify flex">
+                                        <div class="pl-4 border-l-4 border-l-gray-500 py-4 space-y-4">
+                                            <p class="leading-relaxed">
+                                                HTAP stands for hybrid transaction and analytical processing, which is a type of database that allows for both transactional and analytical processing in a single system.
+                                            </p>
+                                            <p class="leading-relaxed">
+                                                This is essentially for very large databases that are being updated frequently. Not only that, but this data, which is updating all the time, is being used for computation for some sort of analysis.
+                                            </p>
+                                            <p class="leading-relaxed">
+                                                This is important because it allows for real-time data processing and analysis, which is crucial for applications such as credit card fraud detection. Every time you use your credit card (an example of data that needs frequent updating), the system needs to process that transaction in real-time to detect fraudulent activity (the analytical part).
+                                            </p>
+                                            <p class="leading-relaxed">
+                                                For example, if you make a transaction in Australia 30 minutes after trying to make a transaction in France (where you reside), an algorithm will take this new information, calculate how likely it is to be fraudulent, and accept or deny the transaction.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 6 - FPGA explanation -->
+                                    <div class="slide hidden text-justify flex">
+                                        <div class="pl-4 border-l-4 border-l-gray-500 py-4 space-y-4">
+                                            <p class="leading-relaxed">
+                                                Finally, we explored implementing content addressable memory (CAM) with FeFETs for FPGAs within the field of high-frequency trading.
+                                            </p>
+                                            <p class="leading-relaxed">
+                                                An FPGA is essentially a very simple circuit board that is highly optimized for ONE specific task. So, it does one thing and it does it REALLY well (Unix philosophy mentioned)...
+                                            </p>
+                                            <p class="leading-relaxed">
+                                                We looked into algorithms commonly used in high-frequency trading, which is a type of trading that involves executing a large number of orders at extremely high speeds. We then developed 4 architecture proposals for the order book (a stage in its algorithm) to improve speed.
+                                            </p>
+                                            <p class="leading-relaxed">
+                                                With this, every nanosecond counts!
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 7 - Conclusion -->
+                                    <div class="slide hidden text-justify flex">
+                                        <div class="pl-4 border-l-4 border-l-gray-500 py-4 space-y-4">
+                                            <p class="leading-relaxed">
+                                                Overall, this summer was beyond transformative. This slideshow only touches on the many fields and subjects we focused on (and that I learned about through the process).
+                                            </p>
+                                            <p class="leading-relaxed">
+                                                It doesn't even delve into the coworkers I met (fellow PhD students—I got to watch my first PhD defense!), explorations in a foreign country outside of work (since we were able to have funding to do this abroad!), and much more!
+                                            </p>
+                                        </div>
+                                    </div>                                </div>
+                                
+                                <!-- Navigation Arrows -->
+                                <div class="flex justify-between items-center mt-3 px-5">
+                                    <button onclick="previousSlide()" class="transition duration-300" style="color: #dc2626 !important;">
+                                        <i class="fa-solid fa-chevron-left text-lg"></i>
+                                    </button>
+                                    
+                                    <!-- Slide Indicators -->
+                                    <div class="flex gap-2">
+                                        <span class="slide-indicator active w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-600 transition duration-300 cursor-pointer"></span>
+                                        <span class="slide-indicator w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700 transition duration-300 cursor-pointer"></span>
+                                        <span class="slide-indicator w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700 transition duration-300 cursor-pointer"></span>
+                                        <span class="slide-indicator w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700 transition duration-300 cursor-pointer"></span>
+                                        <span class="slide-indicator w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700 transition duration-300 cursor-pointer"></span>
+                                        <span class="slide-indicator w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700 transition duration-300 cursor-pointer"></span>
+                                        <span class="slide-indicator w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700 transition duration-300 cursor-pointer"></span>
+                                        <span class="slide-indicator w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700 transition duration-300 cursor-pointer"></span>
+                                    </div>
+                                    
+                                    <button onclick="nextSlide()" class="transition duration-300" style="color: #dc2626 !important;">
+                                        <i class="fa-solid fa-chevron-right text-lg"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -427,20 +560,19 @@
                         </a>
                     </div>
 
-                    <!-- Project 3 - Bigfoot Sightings App -->
+                    <!-- Project 3 - 2048 Recreation -->
                     <div class="flex w-full xl:w-1/2 gap-4 items-center mb-4" data-aos="fade-up">
-                        <a href="./assets/images/bigfoot sightings presentations (1)_no_audio.mp4" target="_blank" rel="noopener noreferrer" class="w-48 h-64 md:h-80 block">
-                            <img src="assets/images/bigfoot.png" alt="Bigfoot Sightings App"
+                        <a href="https://github.com/aynmk7/2048-Recreation" target="_blank" rel="noopener noreferrer" class="w-48 h-64 md:h-80 block">
+                            <img src="assets/images/2048terminal.png" alt="2048 Recreation"
                                  class="w-full h-full object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
                         </a>
-                        <a href="./assets/images/bigfoot sightings presentations (1)_no_audio.mp4" target="_blank" rel="noopener noreferrer" class="border-2 dark:border-gray-700 h-64 md:h-80 p-4 flex flex-col justify-center hover:shadow-lg hover:scale-105 transition duration-300 cursor-pointer flex-1 rounded-lg">
-                            <h2 class="text-base font-popins-bold mb-2">Bigfoot Sightings App</h2>
-                            <div class="text-xs text-gray-500 dark:text-gray-400 mb-2">February – April 2024</div>
+                        <a href="https://github.com/aynmk7/2048-Recreation" target="_blank" rel="noopener noreferrer" class="border-2 dark:border-gray-700 h-64 md:h-80 p-4 flex flex-col justify-center hover:shadow-lg hover:scale-105 transition duration-300 cursor-pointer flex-1 rounded-lg">
+                            <h2 class="text-base font-popins-bold mb-2">2048 Recreation</h2>
+                            <div class="text-xs text-gray-500 dark:text-gray-400 mb-2">December 2024</div>
                             <p class="text-sm">
-                                Created an interactive data visualization dashboard in MATLAB to analyze 4,000+ Bigfoot sightings. 
-                                Implemented keyword search, filters, and time-based density map to reveal spatiotemporal patterns.
+                                Recreated the 2048 game using C, implementing a responsive design and smooth animations within the terminal.
                             </p>
-                            <p class="text-right mt-4"><i class="fa-solid fa-chart-line text-lg"></i></p>
+                            <p class="text-right mt-4"><i class="fa-solid fa-users text-lg"></i></p>
                         </a>
                     </div>
 
@@ -461,7 +593,25 @@
                         </a>
                     </div>
 
-                    <!-- Project 5 - Iraqi-Turkmen Vowel Study -->
+                    <!-- Project 5 - Bigfoot Sightings App -->
+                    <div class="flex w-full xl:w-1/2 gap-4 items-center mb-4" data-aos="fade-up">
+                        <a href="./assets/images/bigfoot sightings presentations (1)_no_audio.mp4" target="_blank" rel="noopener noreferrer" class="w-48 h-64 md:h-80 block">
+                            <img src="assets/images/bigfoot.png" alt="Bigfoot Sightings App"
+                                 class="w-full h-full object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+                        </a>
+                        <a href="./assets/images/bigfoot sightings presentations (1)_no_audio.mp4" target="_blank" rel="noopener noreferrer" class="border-2 dark:border-gray-700 h-64 md:h-80 p-4 flex flex-col justify-center hover:shadow-lg hover:scale-105 transition duration-300 cursor-pointer flex-1 rounded-lg">
+                            <h2 class="text-base font-popins-bold mb-2">Bigfoot Sightings App</h2>
+                            <div class="text-xs text-gray-500 dark:text-gray-400 mb-2">February – April 2024</div>
+                            <p class="text-sm">
+                                Created an interactive data visualization dashboard in MATLAB to analyze 4,000+ Bigfoot sightings. 
+                                Implemented keyword search, filters, and time-based density map to reveal spatiotemporal patterns.
+                            </p>
+                            <p class="text-right mt-4"><i class="fa-solid fa-chart-line text-lg"></i></p>
+                        </a>
+                    </div>
+
+
+                    <!-- Project 6 - Iraqi-Turkmen Vowel Study -->
                     <div class="flex w-full xl:w-1/2 gap-4 items-center mb-4" data-aos="fade-up">
                         <a href="linguistics-study.html" class="w-48 h-64 md:h-80 block">
                             <img src="assets/images/turkman plot.png" alt="Linguistic Study"
