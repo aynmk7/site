@@ -1567,3 +1567,26 @@ body {
     line-height: 1.75rem;
   }
 }
+
+/* Custom paragraph indentation for essay sections */
+.indent-8 {
+  text-indent: 2rem !important;
+}
+
+/* Custom narrow width for essay content */
+.essay-narrow {
+  max-width: 75ch !important;
+  margin: 0 auto !important;
+}
+
+/* Center section titles */
+.section-title {
+  text-align: center !important;
+  margin: 0 auto !important;
+  max-width: 75ch !important;
+}
+
+/* Add extra top padding to sections */
+.section-spacing {
+  padding-top: 2rem !important;
+}
